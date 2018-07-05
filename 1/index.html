@@ -9,9 +9,131 @@ Tip: Investigar el evento window.onload
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Luis Miguel</title>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+
+    <style>
+
+        body{
+          margin-left: 4rem;
+          background-image: url('fondo.png');
+
+        }
+        img{
+          width: 300px;
+          border:solid 2px white;
+          border-radius: 5px;
+          margin-left: 2rem;
+
+        }
+
+        h2{
+          color: #FF5729;
+          font-size: 3rem;
+          font-family: sans-serif;
+          padding-left: 2rem;
+        }
+
+        h3{
+          color: white;
+          font-family: serif;
+          font-size: 2rem;
+          padding-left: 2rem;
+
+        }
+
+        span{
+          color: white;
+          font-family: serif;
+          font-size: 1.5rem;
+          padding-left: 3rem;
+          
+        }
+        #uno{
+          margin-right: 5rem;
+          margin-left: 4rem;
+        }
+
+        #dos{
+          margin-right: 5rem;
+          margin-left: 4rem;
+        }
+
+        #tres{
+          margin-right: 5rem;
+          margin-left: 6rem;
+        }
+
+        #cuatro{
+          margin-right: 3rem;
+          margin-left: 2rem;
+        }
+
+        #cinco{
+          margin-right: 2rem;
+          margin-left: 2rem;
+        }
+
+        #seis{
+          margin-right: 3rem;
+          margin-left: 2rem;
+        }
+    </style>
+  
   </head>
   <body>
+    <h2>PELÍCULAS</h2>
 
+    <div>
+      <h3>Ya nunca más</h3>
+      <img src="nuncamas.jpg">
+      <img src="nuncamasdos.jpg">
+    </div>
+
+    <div>
+      <h3>Fiebre de Amor</h3>
+      <img src="fiebre.jpg">
+      <img src="fiebrea.jpg">
+    </div>
+
+    <h2>VIDEOS</h2>
+    <div>
+      <img src="laincondicional.png">
+      <img src="tengotodo.jpg">
+      <img src="prodebajo.jpg">
+    </div>
+    <div>
+      <span id="uno">La Incondicional</span>
+      <span id="dos">Suave</span>
+      <span id="tres">Por debajo de la mesa</span>
+    </div>
+
+     <div>
+      <img src="elsol.jpg">
+      <img src="mariachi.jpg">
+      <img src="mediavuelta.jpg">
+    </div>
+    <div>
+      <span id="cuatro">Cuando Calienta el Sol</span>
+      <span id="cinco">La Fiesta del Mariachi</span>
+      <span id="seis">La Media Vuelta</span>
+    </div>
+    <p>El Evento load se dispara cuando el documento ha terminado de cargarse!</p>
+
+    <script>
+      $(document).ready()
+        alert("DOM Cargado")
+      function load() {
+        alert("Imagenes cargadas!");
+      }
+      window.onload = load;
+    </script>
   </body>
 </html>
+
+
+Una página puede ser manipulada sin riesgo de errores solamente cuando el documento está listo. jQuery se encarga de detectar dicho estado en nuestro lugar. El código incluido dentro de $( document ).ready() se ejecutará solamente cuando el modelo de objeto de documento (DOM) esté listo para ejecutar código Javascript. Por su parte, el código incluido después de $( window ).on( "load", function() { ... }) se ejecutará solamente cuando la página entera (imágenes o iframes), no solamente el DOM, esté lista.
