@@ -17,7 +17,22 @@ Tip: Investigar el evento window.onload
     </script>
 
     <style>
+        .icon{
+          position: fixed;
+          border-radius: 20rem;
+          width: 5%;
+          left: 1150px;
+          margin-bottom: 3rem;
 
+        }
+
+        header{
+          margin-top: 0px;
+        }
+
+        main{
+          margin-top: 250px;
+        }
         body{
           margin-left: 4rem;
           background-image: url('fondo.png');
@@ -32,10 +47,13 @@ Tip: Investigar el evento window.onload
         }
 
         h2{
-          color: #FF5729;
+          color: #969698;
           font-size: 3rem;
           font-family: sans-serif;
-          padding-left: 2rem;
+          padding-left: 4rem;
+          background-color: white;
+          border-radius: 20px;
+          width: 30%;
         }
 
         h3{
@@ -46,9 +64,13 @@ Tip: Investigar el evento window.onload
 
         }
 
+        .videos{
+          margin-top: 3rem;
+        }
+
         span{
           color: white;
-          font-family: serif;
+          font-family: monospace;
           font-size: 1.5rem;
           padding-left: 3rem;
           
@@ -69,8 +91,8 @@ Tip: Investigar el evento window.onload
         }
 
         #cuatro{
-          margin-right: 3rem;
-          margin-left: 2rem;
+          margin-right: 2rem;
+          margin-left: 1rem;
         }
 
         #cinco{
@@ -86,54 +108,58 @@ Tip: Investigar el evento window.onload
   
   </head>
   <body>
-    <h2>PELÍCULAS</h2>
+    <header>
+      <div>
+        <img src="icon.jpg" class="icon">
+      </div>
+    </header>
+      
+    <main>
+      <h2>PELÍCULAS</h2>
+      <div>
+        <h3>Ya nunca más</h3>
+        <img src="nuncamas.jpg">
+        <img src="nuncamasdos.jpg">
+      </div>
 
-    <div>
-      <h3>Ya nunca más</h3>
-      <img src="nuncamas.jpg">
-      <img src="nuncamasdos.jpg">
-    </div>
+      <div>
+        <h3>Fiebre de Amor</h3>
+        <img src="fiebre.jpg">
+        <img src="fiebrea.jpg">
+      </div>
 
-    <div>
-      <h3>Fiebre de Amor</h3>
-      <img src="fiebre.jpg">
-      <img src="fiebrea.jpg">
-    </div>
+      <h2>VIDEOS</h2>
+      <div class="videos">
+        <img src="laincondicional.png">
+        <img src="tengotodo.jpg">
+        <img src="prodebajo.jpg">
+      </div>
+      <div>
+        <span id="uno">La Incondicional</span>
+        <span id="dos">Suave</span>
+        <span id="tres">Por debajo de la mesa</span>
+      </div>
 
-    <h2>VIDEOS</h2>
-    <div>
-      <img src="laincondicional.png">
-      <img src="tengotodo.jpg">
-      <img src="prodebajo.jpg">
-    </div>
-    <div>
-      <span id="uno">La Incondicional</span>
-      <span id="dos">Suave</span>
-      <span id="tres">Por debajo de la mesa</span>
-    </div>
+       <div class="videos">
+        <img src="elsol.jpg">
+        <img src="mariachi.jpg">
+        <img src="mediavuelta.jpg">
+      </div>
+      <div>
+        <span id="cuatro">Cuando Calienta el Sol</span>
+        <span id="cinco">La Fiesta del Mariachi</span>
+        <span id="seis">La Media Vuelta</span>
+      </div>
+    </main>
 
-     <div>
-      <img src="elsol.jpg">
-      <img src="mariachi.jpg">
-      <img src="mediavuelta.jpg">
-    </div>
-    <div>
-      <span id="cuatro">Cuando Calienta el Sol</span>
-      <span id="cinco">La Fiesta del Mariachi</span>
-      <span id="seis">La Media Vuelta</span>
-    </div>
-    <p>El Evento load se dispara cuando el documento ha terminado de cargarse!</p>
-
-    <script>
-      $(document).ready()
-        alert("DOM Cargado")
-      function load() {
-        alert("Imagenes cargadas!");
-      }
-      window.onload = load;
-    </script>
+      <script>
+        $(document).ready()
+          alert("DOM Cargado")
+        function load() {
+          alert("Imagenes cargadas!");
+        }
+        window.onload = load;
+      </script>
   </body>
 </html>
 
-
-Una página puede ser manipulada sin riesgo de errores solamente cuando el documento está listo. jQuery se encarga de detectar dicho estado en nuestro lugar. El código incluido dentro de $( document ).ready() se ejecutará solamente cuando el modelo de objeto de documento (DOM) esté listo para ejecutar código Javascript. Por su parte, el código incluido después de $( window ).on( "load", function() { ... }) se ejecutará solamente cuando la página entera (imágenes o iframes), no solamente el DOM, esté lista.
