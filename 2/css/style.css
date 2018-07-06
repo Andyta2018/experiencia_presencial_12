@@ -1,0 +1,48 @@
+.icon{
+    position: fixed;
+    border-radius: 20rem;
+    width: 5%;
+    left: 1150px;
+    margin-bottom: 3rem;
+
+
+}
+
+header{
+    margin-top: 0px;
+}
+
+main{
+    margin-top: 250px;
+}
+body{
+    margin-left: 4rem;
+    background-color: #595859;
+
+}
+
+
+h2{
+    color: #969698;
+    font-size: 3rem;
+    font-family: sans-serif;
+    padding-left: 4rem;
+    background-color: white;
+    border-radius: 20px;
+    width: 30%;
+}
+
+.imgen{
+  width: 300px;
+    border:outset 6px;
+    border-color: white black;
+    border-radius: 5px;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    transition: 1s;
+}
+.desat{
+    filter: grayscale(100%);
+}
+
+

@@ -8,12 +8,65 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 -->
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Luis Miguel | El Sol</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+
   </head>
   <body>
+    <header>
+      <div>
+        <img src="images/icon.jpg" class="icon">
+      </div>
+    </header>
+      
+    <main>
+      
+      <h2>DISCOGRAFÍA</h2>
+      <div class="discos">
+	        <img src="images/amarte.jpg" class="imgen desat">
+	        <img src="images/americaenvivo.jpg" class="imgen desat">
+	        <img src="images/decidete.jpg" class="imgen desat">
+      </div>
+      
+       <div class="discos">
+	        <img src="images/directoal.jpg" class=" imgen desat">
+	        <img src="images/edicionlujo.jpg" class=" imgen desat">
+	        <img src="images/grandesexitos.jpg" class="imgen desat">
+      	</div>
 
+     	<div class="discos">
+	        <img src="images/mexicopiel.jpg" class="imgen desat">
+	        <img src="images/navidad.jpg" class="imgen desat">
+	        <img src="images/romance.jpg" class="imgen desat">
+      	</div>
+
+      	<div class="discos">
+	        <img src="images/romances.jpg" class="imgen desat">
+	        <img src="images/segromance.jpg" class="imgen desat">
+	        <img src="images/solarenamar.jpg" class="imgen desat">
+      	</div>
+      	<div class="discos">
+	        <img src="images/soycomo.jpg" class="imgen desat">
+	        <img src="images/treintatres.jpg" class="imgen desat">
+	        <img src="images/veinteaños.jpg" class="imgen desat">
+      	</div>
+      
+    </main>
+
+      <script>
+     	$(".imgen").on("click", function(){
+     		$(".imgen").toggleClass("desat");
+     	})
+        	
+      </script>
   </body>
 </html>
+
